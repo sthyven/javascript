@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: url('gambar/k.jpg') no-repeat center center fixed;
+            background-size: cover;
+            /* Ganti URL di atas dengan gambar anime background kamu sendiri */
+        }
+        .glass-card {
+            background: rgba(227, 217, 217, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+        .input-field {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .input-field:focus {
+            background: rgba(255, 255, 255, 0.95);
+            outline: none;
+            border-color: #000000;
+        }
+        .btn-pink {
+            background: linear-gradient(135deg, #000000, #070104);
+            transition: all 0.3s ease;
+        }
+        .btn-pink:hover {
+            background: linear-gradient(135deg, #0a0205, #14030c);
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="glass-card rounded-2xl shadow-2xl p-8 w-full max-w-md">
+        <h2 class="text-3xl font-bold mb-6 text-center text-white drop-shadow-lg">Register</h2>
+        
+        <form id="registerForm" action="dashboard.html" method="GET" class="space-y-4">
+            
+            <!-- Username -->
+            <div>
+                <input type="text" id="username" name="username" placeholder="Username" 
+                    class="input-field w-full px-4 py-2.5 rounded-lg text-gray-800 text-sm">
+                <p id="error-username" class="text-red-300 text-xs mt-1 hidden font-medium"></p>
+            </div>
+
+            <!-- Password -->
+            <div>
+                <input type="password" id="password" name="password" placeholder="Password" 
+                    class="input-field w-full px-4 py-2.5 rounded-lg text-gray-800 text-sm">
+                <p id="error-password" class="text-red-300 text-xs mt-1 hidden font-medium"></p>
+            </div>
+
+            <!-- Nama -->
+            <div>
+                <input type="text" id="nama" name="nama" placeholder="Nama" 
+                    class="input-field w-full px-4 py-2.5 rounded-lg text-gray-800 text-sm">
+                <p id="error-nama" class="text-red-300 text-xs mt-1 hidden font-medium"></p>
+            </div>
+
+            <!-- Tanggal Lahir -->
+            <div>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir" 
+                    class="input-field w-full px-4 py-2.5 rounded-lg text-gray-800 text-sm">
+                <p id="error-tanggal_lahir" class="text-red-300 text-xs mt-1 hidden font-medium"></p>
+            </div>
+
+            <!-- Alamat -->
+            <div>
+                <textarea id="alamat" name="alamat" rows="2" placeholder="Alamat" 
+                    class="input-field w-full px-4 py-2.5 rounded-lg text-gray-800 text-sm resize-none"></textarea>
+                <p id="error-alamat" class="text-red-300 text-xs mt-1 hidden font-medium"></p>
+            </div>
+
+            <!-- Nomor Telpon -->
+            <div>
+                <input type="text" id="nomor_telpon" name="nomor_telpon" placeholder="628123456789" 
+                    class="input-field w-full px-4 py-2.5 rounded-lg text-gray-800 text-sm">
+                <p id="error-nomor_telpon" class="text-red-300 text-xs mt-1 hidden font-medium"></p>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-pink w-full py-2.5 rounded-lg text-white font-semibold text-sm shadow-lg">
+                Daftar
+            </button>
+        </form>
+    </div>
+
+    <script src="validasi_input.js"></script>
+</body>
+</html>
